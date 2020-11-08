@@ -19,14 +19,14 @@ setText('')
   }
   return (
     <div className="income">
-    <input className='income_input' onChange={(e)=>setText(e.target.value)} value={text} placeholder='Add expence...' type="text"/> <br/>
+    <input className='income_input' onChange={(e)=>setText(e.target.value)} value={text} placeholder='Add income...' type="text"/> <br/>
     <input className='income_input' onChange={(e)=>setMoney(e.target.value)} value={money} placeholder='Money' type="number"/>  <br/>
     <button onClick={textInput} className='income_btn'>Submit</button> 
-  {
+    {incomeTodo.length?
 incomeTodo.map(item=>(
    <IncomeItem key={item.id} data={item}/>
   ))
-  }
+  :<div className='noTodo'>Transaction history</div>}
     </div>
   );
 }

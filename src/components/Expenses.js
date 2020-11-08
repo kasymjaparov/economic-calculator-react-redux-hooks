@@ -22,11 +22,11 @@ function App() {
     <input className='income_input' onChange={(e)=>setText(e.target.value)} value={text} placeholder='Add expence...' type="text"/> <br/>
     <input className='income_input' onChange={(e)=>setMoney(e.target.value)} value={money} placeholder='Money' type="number"/>  <br/>
     <button onClick={textInput} className='income_btn expence_btn'>Submit</button> 
-  {
+  {expenceTodo.length?
 expenceTodo.map(item=>(
    <ExpenceItem key={item.id} data={item}/>
   ))
-  }
+  :<div className='noTodo'>Transaction history</div>}
     </div>
   );
 }

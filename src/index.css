@@ -235,3 +235,8 @@ h6 {
     margin: 0px 0px 5px 0px ;
     cursor: pointer;
 }
+.noTodo{
+    margin: 20px 0px 0px 0px ;
+    font-size: 18px;
+    color: white;
+}
